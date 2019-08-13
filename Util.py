@@ -234,8 +234,10 @@ def get_max_area(contours):
 if __name__ == '__main__':
     # Reading the input image
     # img = cv2.imread('E:\\Study\\2019-Summer\\SURF\\CNN\\data\\images\\20190808\\0808172539.jpg', 0)
-    img = cv2.imread('E:\\Study\\2019-Summer\\SURF\\CNN\\data\\images\\Scaffold\\0730103043.jpg', 0)
+    # img = cv2.imread('E:\\Study\\2019-Summer\\SURF\\CNN\\data\\images\\Scaffold\\0730103043.jpg', 0)
     # img = cv2.imread('E:\\Study\\2019-Summer\\SURF\\CNN\\data\\images\\20190808\\0808170829.jpg', 0)
+
+    img = cv2.imread('E:\\Study\\2019-Summer\\SURF\\CNN\\data\\images\\20190813125845.jpg')
     ret, thresh2 = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY_INV)  # 获取灰度图
 
     thresh2 = ero_dila(thresh2, 2)  # 边缘平滑处理
